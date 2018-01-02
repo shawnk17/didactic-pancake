@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Manager</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/bookmanager.html">Book Manager</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Book Manager</h1>
+
+        <div id="book-entry">
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="title">
+            </div>
+            <div>
+                <label for="author-first-name">Author First Name:</label>
+                <input type="text" id="author-first-name">
+            </div>
+            <div>
+                <label for="author-last-name">Author Last Name:</label>
+                <input type="text" id="author-last-name">
+            </div>
+            <div>
+                <label for="publish-year">Publish Year:</label>
+                <input type="text" id="publish-year">
+            </div>
+
+            <button type="button" id="add-button">Add Book</button>
+            <button type="button" id="clear-button">Clear Inputs</button>
+            <button type="button" id="sort-by-author-lname">Sort: Author LName</button>
+        </div>
+
+        <div id="book-list">
+            <h2>Book List</h2>
+            <div id="book-list-data"></div>
+        </div>
+
+    </main>
+    <script src="/js/books.js"></script>
+</body>
+
+</html>

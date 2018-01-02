@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    < link rel="stylesheet" href="/css/body.css">
-
+    <title>Dynamic UI with JavaScript</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    
     <header>
         <nav>
-            <ul> home</ul>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/bookmanager.html">Book Manager</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <div id="controls" >
+        <div id="controls">
             <input type="text" id="insert-text">
-            <button type="button" id="insert-button-tag">insert tag</button>
-            <button type="button" id="insert-button-element">insert element</button>
-            < button type="button"
+            <button type="button" id="insert-button-tag">Insert Text By Tag</button>
+            <button type="button" id="insert-button-element">Insert Text by Element</button>
+            <button type="button" id="changeBg">Change Background Color</button>
         </div>
-        <div id="output"></div>
-
+        <div id="output">
+            <h3>Insert Stuff Here</h3>
+        </div>
     </main>
-
-    <script src="/js/demo.js"></script>
+   
+    <script src="/js/demo2.js"></script>
 </body>
 </html>

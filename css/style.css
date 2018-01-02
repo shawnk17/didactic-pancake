@@ -1,0 +1,23 @@
+body {
+    font-size: 100%;
+    background-color: lightblue;
+}
+
+.highlight {
+    background-color: lightcyan;
+    color: darkred;
+    border: 1px solid red;
+    width: 50%;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.bg1 {
+    background-color: lightgoldenrodyellow;
+    color: black;
+}
+
+.bg2 {
+    background-color: darkorchid;
+    color: white;
+}
