@@ -1,6 +1,6 @@
 "use strict";
 
-(function(){
+(function () {
     var output = document.getElementById("book-list-data"),
         addButton = document.getElementById("add-button"),
         clearButton = document.getElementById("clear-button"),
@@ -11,16 +11,16 @@
         yearText = document.getElementById("publish-year"),
         books = [];
 
-    var Book = function Book(title, fName, lName, year){
+    var Book = function Book(title, fName, lName, year) {
         this.Title = title;
         this.AuthorFirstName = fName;
         this.AuthorLastName = lName;
         this.Year = year;
     };
 
-    var renderList = function renderList(){
+    var renderList = function renderList() {
         output.innerHTML = "";
-        books.forEach(function(book, idx, arr){
+        books.forEach(function (book, idx, arr) {
             var newDiv = document.createElement("div"),
                 newHeading = document.createElement("h2"),
                 newPara = document.createElement("p");
@@ -35,7 +35,7 @@
         });
     };
 
-    addButton.addEventListener("click", function(){
+    addButton.addEventListener("click", function () {
         var newBook = new Book(titleText.value, fNameText.value, lNameText.value, yearText.value);
 
         books.push(newBook);
@@ -43,18 +43,31 @@
         renderList();
     });
 
-    sortByLName.addEventListener("click", function(){
+    var clearInputs = function clearInputs() {
+        yearText.value = " ";
+        titleText.value = " ";
+        fNameText.value = " ";
+        lNameText.value = " ";
+    };
+
+    clearButton.addEventListener("click", function () {
+        books = [];
+        renderList();
+        clearInputs();
+    });
+    
+    sortByLName.addEventListener("click", function () {
         var sortNum = 0;
-        books = books.sort(function(a,b){
+        books = books.sort(function (a, b) {
             var nameA = a.AuthorLastName.toUpperCase();
             var nameB = b.AuthorLastName.toUpperCase();
 
             console.log("Sort! " + sortNum++ + " A: " + nameA + " B: " + nameB);
 
-            if(nameA < nameB){
+            if (nameA < nameB) {
                 return -1;
             }
-            if(nameA > nameB){
+            if (nameA > nameB) {
                 return 1;
             }
             return 0;
