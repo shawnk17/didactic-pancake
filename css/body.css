@@ -1,0 +1,15 @@
+body{
+    background-color: aqua;
+    font-size: 100%;
+}
+
+.bg1{
+    background-color: white;
+    color: black;
+}
+
+.bg2{
+    background-color: black;
+    color: white;
+}
+
